@@ -8,8 +8,8 @@
 
     <!--STYLES-->
 
-    <link rel="stylesheet" href="styles/global.css" />
-    <link rel="stylesheet" href="styles/home.css" />
+    <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="stylesheet" href="/styles/home.css" />
 
     <!-- FONTS -->
 
@@ -23,7 +23,9 @@
     <body>
       <div id="home" class="content">
         <header>
-        <img src="images/logo.svg" alt="Rocket.Q Logo" />
+          <a href="/">
+            <img src="/images/logo.svg" alt="Rocket.Q Logo" />
+          </a>
         </header>
 
         <div id="bg">
@@ -32,35 +34,12 @@
         </div>
 
 
-        <main>
+  <main>
       <div class="container">
-        <section>
-          <h2>Entre como Participante</h2>
-          <form action="">
-            <label class="sr-only" for="room-id">Código da Sala</label>
-            <input type="number" id="room-id" placeholder="Código da Sala" />
-            <button>
-              <img src="images/enter-room.svg" alt="" />
-              Entrar na Sala
-            </button>
-          </form>
-        </section>
-
-        <div class="separator">
-          <div></div>
-          <div>ou</div>
-          <div></div>
-        </div>
-
-        <section>
-          <h2>Crie a sua Própria Sala de forma Fácil</h2>
-          <a href="create-room.html" class="button outlined">
-            <img src="images/users.svg" id="." alt="Criar Sala" /> Criar Sala
-          </a>
-        </section>
-        <section></section>
+        <!-- Renderizar a Parte Correta de Acordo com o Url-->
+        <%- include(`parts/${page}`) %>
       </div>
     </div>
-    </main>
+  </main>
   </body>
 </html>
